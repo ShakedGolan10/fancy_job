@@ -53,6 +53,6 @@ require('dotenv').config(); // Load environment variables from .env file
     // Step 5: Clean up by removing the temporary directory
     await fs.rm(tempDir, { recursive: true, force: true });
   } catch (error) {
-    console.error('Error during commit and push process:', error);
+    console.log('Error during commit and push process:', error);
   }
 })();
