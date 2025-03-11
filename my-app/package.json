@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-output": "npm run build && rm -rf .vercel/output && mkdir -p .vercel/output && cp Dockerfile .vercel/output/Dockerfile && echo '{\"runtime\":\"docker\"}' > .vercel/output/config.json"
   },
   "dependencies": {
     "axios": "^1.8.2",
