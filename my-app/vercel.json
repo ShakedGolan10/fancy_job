@@ -1,9 +1,10 @@
 {
-    "buildCommand": "",
-    "ignoreCommand": "",
-    "outputDirectory": "",
-    "devCommand": "",
-    "installCommand": "",
+    "version": 3,
+    "builds": [
+      {
+        "src": "Dockerfile",
+        "use": "@vercel/docker"
+      }
+    ],
     "framework": null
   }
-  
