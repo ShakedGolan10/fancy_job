@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-output": "npm run build && rm -rf .vercel/output && mkdir -p .vercel/output && cp Dockerfile .vercel/output/Dockerfile && echo '{\"runtime\":\"docker\"}' > .vercel/output/config.json"
+    "build-output": "echo 'Running build-output' && npm run build && echo 'Finished build, creating .vercel/output...' && rm -rf .vercel/output && mkdir -p .vercel/output && cp Dockerfile .vercel/output/Dockerfile && echo '{\"runtime\":\"docker\"}' > .vercel/output/config.json && echo 'Done creating .vercel/output'"
   },
   "dependencies": {
     "axios": "^1.8.2",
