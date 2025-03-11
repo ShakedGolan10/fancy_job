@@ -1,13 +1,16 @@
-FROM node 
+FROM node:18-alpine
+
+RUN apk add --no-cache git
 
 WORKDIR /app
 
-COPY package.json /app
+COPY package*.json ./
+RUN npm install
 
-RUN npm i
+COPY . .
 
-COPY . /app
+RUN npm run build
 
-EXPOSE 80
+EXPOSE 3000
 
-CMD ["npm", "run", "dev"]
+CMD ["npm", "run", "start"]
