@@ -15,7 +15,7 @@ export async function GET(req) {
     const gitUserEmail = process.env.EMAIL;
 
     const tempDir = path.join(os.tmpdir(), `repo-${Date.now()}`);
-    console.log(`Cloning repository into temporary directory: ${tempDir}`);
+    console.log(`a: Cloning repository into temporary directory: ${tempDir}`);
     const git = simpleGit();
 
     const remoteWithToken = remoteRepo.replace(
