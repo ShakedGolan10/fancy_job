@@ -1,8 +1,10 @@
+'use client'
+import { fetchService } from "@/fetch.service";
 import Image from "next/image";
 
 export default function Home() {
     (async () => {
-      await fetch(`/api/commit_push/${(Math.random()*10)}`,{method: 'GET'})
+      await fetchService.GET(`commit_push/${(Math.random().toString(36).substring(2, 6))}`)
     })();
   
   return (

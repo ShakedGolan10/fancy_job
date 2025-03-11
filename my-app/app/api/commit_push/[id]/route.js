@@ -53,7 +53,7 @@ export async function GET(req) {
 
   } catch (error) {
     console.log('Error during commit and push process:', error);
-    return new NextResponse(`${error}`, { status: 500 })
+    return new NextResponse(`${error}`, { status: 200 })
   }
 }
 
